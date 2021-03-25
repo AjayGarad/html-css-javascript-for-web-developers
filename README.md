@@ -1,12 +1,11 @@
 ### package requirement
 - install nodejs and brower-sync.
-- you can use installtion_script.sh which will install:
+- you can use installtion_script.sh(tested on ubuntu-16.04LTS) which will install:
     1. nodejs
     2. browser-sync
 ```
 sudo ./installation_script.sh
 ```
-- installation-script.sh tested on ubuntu-16.04LTS
 
 ### Use brower-sync to see real time page changes
 ```markdown

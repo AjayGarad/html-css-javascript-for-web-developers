@@ -36,12 +36,12 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
 
-# package requirement
+### package requirement
 1. install nodejs and brower-sync
 - you can use installtion_script.sh for the same.
 - installation-script.sh tested on ubuntu-16.04LTS
 
-# Use brower-sync to see real time page changes
-```
+### Use brower-sync to see real time page changes
+```markdown
 browser-sync start --server --directory --files "*"
 ```

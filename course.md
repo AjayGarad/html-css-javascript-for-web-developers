@@ -51,11 +51,11 @@
     - will help in rendering issue
     - if browser didnt understand the tag then it skip the data from it
     - we need to tell browser about difference between tag and tag as content by following ways
-        - < - `&lt;`
-        - > - `&gt;`
-        - & - `&amp;`
-        - copyright symbol - `&copy;`
-        - space - `&nbsp;`
+        - `< - &lt;`
+        - `> - &gt;`
+        - `& - &amp;`
+        - `copyright symbol - &copy;`
+        - `space - &nbsp;`
             - will use when we want some words to be always together instead breaking in new line
             - dont use to give more space in word instead use margin with span
-        - " - `&quot;` - when charecterset is small instead utf-8 then it will cause issue with symbol
+        - `" - &quot;` - when charecterset is small instead utf-8 then it will cause issue with symbol

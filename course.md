@@ -4,9 +4,10 @@
     - browser will interpret the html page sequentially from top to bottom
 
 - Why to write <!doctype html>:
-    - this is historical
-    - oldtime there were files which are not compliant to the standards
-- help brower to render the content correctly brower usage doctype declaration to distinguish non compliant(render in quirks mode) and compliant pages(standard mode)
+    - oldtime web pages were catagories in two format:
+        - non compliant to the html standards(render in quirks mode)
+        - compliant to html standard(render in standard mode)
+    - So to help brower rendering content correctly doctype declaration is used
 
 - content models
     - block level elements

@@ -13,7 +13,6 @@ browser-sync start --server --directory --files "*"
 ```
 
 ### resource links
-```
 - https://github.com/nodesource/distributions/blob/master/README.md#debinstall
 - https://browsersync.io/
 - https://jsfiddle.net/
@@ -25,5 +24,3 @@ resoure for validation your code for all browser
 - https://validator.w3.org/#validate_by_uri+with_options
 brower usage statistics
 - https://www.w3schools.com/browsers/
-- [content model](https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html)
-```

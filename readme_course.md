@@ -9,7 +9,7 @@
         - compliant to html standard(render in standard mode)
     - So to help brower rendering content correctly doctype declaration is used
 
-- content models
+- [content model](https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html)
     - block level elements
     - inline elements
 

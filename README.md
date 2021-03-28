@@ -17,10 +17,10 @@ browser-sync start --server --directory --files "*"
 - https://browsersync.io/
 - https://jsfiddle.net/
 - https://codepen.io/
-feature investigation
-- https://css-tricks.com/
-- https://caniuse.com/
-resoure for validation your code for all browser
-- https://validator.w3.org/#validate_by_uri+with_options
-brower usage statistics
-- https://www.w3schools.com/browsers/
+- **feature investigation**
+    - https://css-tricks.com/
+    - https://caniuse.com/
+- **resoure for validation your code for all browser**
+    - https://validator.w3.org/#validate_by_uri+with_options
+- **brower usage statistics**
+    - https://www.w3schools.com/browsers/

@@ -1,5 +1,4 @@
 ### package requirement
-
 - install nodejs and brower-sync.
 - you can use installtion_script.sh(tested on ubuntu-16.04LTS) which will install:
     1. nodejs
@@ -8,15 +7,12 @@
 ```
 sudo ./installation_script.sh
 ```
-
 ### Use brower-sync to see real time page changes
-
 ```markdown
 browser-sync start --server --directory --files "*"
 ```
 
 ### resource links
-
 ```
 - https://github.com/nodesource/distributions/blob/master/README.md#debinstall
 - https://browsersync.io/

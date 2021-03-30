@@ -1,7 +1,9 @@
 - HTML
     - Annotates content
-    - Define document structure
+    - Define document structure(structure of the content)
     - browser will interpret the html page sequentially from top to bottom
+    - when origin precedence is in conflict then last declaration win cause html process sequentially top to bottom(same goes for css)
+    - every element inherit the style property of parent element(document object model tree )
 
 - Why to write <!doctype html>:
     - oldtime web pages were catagories in two format:
@@ -29,9 +31,29 @@
     - body tag - `<body></body>`
         - contain all the content which need to show to user - also known as viewport
 
+    - style tag - <style></style>
+        - you can use style tag to define css for elements in same html file
+    
+    - link tag - <link>
+        - rel attribute
+            - will use to define type of attached document
+        - href attribute
+            - link path of the file
+        - Eg.
+        ```
+        <link rel="stylesheet", href="style.css">
+        ```
     - h tag - `<h1></h1>, <h2></h2>, <h3></h3>, <h4></h4>, <h5></h5>, <h6></h6>`
         - specify heading - use for structuring of the code only
 
+    - style attribute - style=""
+        - we can also define css style by using style attribute
+    
+    - class attibute - class=""
+        - you can apply multiple class element by listing them like:
+        ```
+            <p class="name1 name2">
+        ```
     - semantic element
         - dont give any new functionality than div tag or span tag
             - header tag - `<header></header>` (semantic element)
@@ -64,3 +86,86 @@
                 - will use when we want some words to be always together instead breaking in new line
                 - dont use to give more space in word instead use margin with span
             - `" - &quot;` - when charecterset is small instead utf-8 then it will cause issue with symbol
+
+    - create link tag - <a></a>
+        - attribute - href- hypertext refrence
+            - value - #id or #name- will be used to jump on the same page with the tag have the same id or name
+        - attribute - title - give info the web page reader about image
+        - attribute - target - 
+            - value - _blank - will open the link in new tab
+    - image tag - <img></img>
+        - attribute - src - path to image
+        - attribute - width
+        - attribute - height
+        - browser will store the space for image if width and height attr are defined, if browser unable to load image data still web page will look proper according to lay out
+        - attribute - alt - help screen reader
+
+    - comment tag - <!-- code -->
+
+- CSS - cascading styles sheet
+    - css rule consist of selector(p) followed by open and close curly braces - inside it contain declartion - which contain property(color) and value(blue)
+    - ex:
+        p {color: blue;}
+    - collection of css rules is call style sheet
+    - cascading algorithm is used to combine property and value from different sources
+    - origin merge inheritance specificity
+    - selector type:
+        - element selector
+            ```
+            p {
+                color: blue;
+                }
+            ```
+        - class selector 
+            - use . before selector name
+            ```
+            .blue {
+                color: blue;
+                }
+            ```
+        - id selector
+            - use # before selector name
+            ```
+            #name {
+                color: blue;
+                }
+            ```
+        - grouping selectors 
+            ```
+            div, .blue {
+                color: blue;
+                }
+            ```
+        - combining selectors
+            - element with class selector
+                ```
+                p.big {
+                    color: blue;
+                    }
+                ```
+            - child selector
+                - every p element which is direct child of an article element will apply the following style
+                - not limited to element selector. we can use id, class, element
+                ```
+                article > p {
+                    color: blue;
+                }
+                ```
+            - descendent selector
+                - every p element which are child of an article element will apply the following style
+                - not limited to element selector. we can use id, class, element
+                ``` 
+                article p {
+                    color: blue;
+                }
+                ```
+            - adjuscent sibling selector
+            - general sibling selector
+        - pseudo selector
+            - anyselector followed by : and then below pseudo selector
+            - :link
+            - :visited
+            - :hover
+            - :active
+            - :nth_child(...)
+                - value - number like 4 5, all odd level,all even level

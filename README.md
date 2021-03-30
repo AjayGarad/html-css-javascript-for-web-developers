@@ -22,5 +22,5 @@ browser-sync start --server --directory --files "*"
     - https://caniuse.com/
 - **resoure for validation your code for all browser**
     - https://validator.w3.org/#validate_by_uri+with_options
-- **brower usage statistics**
+- **browser usage statistics**
     - https://www.w3schools.com/browsers/

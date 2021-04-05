@@ -46,7 +46,7 @@
     - h tag - `<h1></h1>, <h2></h2>, <h3></h3>, <h4></h4>, <h5></h5>, <h6></h6>`
         - specify heading - use for structuring of the code only
 
-    - style attribute - style=""
+    - style attribute - style="" (inline styling)
         - we can also define css style by using style attribute
     
     - class attibute - class=""
@@ -103,13 +103,29 @@
     - comment tag - <!-- code -->
 
 - CSS - cascading styles sheet
+    - padding margin border
     - css rule consist of selector(p) followed by open and close curly braces - inside it contain declartion - which contain property(color) and value(blue)
     - ex:
         p {color: blue;}
     - collection of css rules is call style sheet
     - cascading algorithm is used to combine property and value from different sources
-    - origin merge inheritance specificity
-    - selector type:
+    - conflict resolution in cascading algo 
+        - origin 
+            - two declaration are specified for same property and same target, then last declaration wins
+        - merge
+            - when different declaration do not conflict but target same element, then declartion merge
+        - inheritance
+            - every child element inherit property parent element till no conflict
+        - specificity
+            - most specific selector combination wins
+            - order of score ranking
+                1. style=".." 
+                2. ID
+                3. (class, psudo-class, attribute)
+                4. element
+    - vertical margin collapse with other vertical margin whereas horizontal margin cumulative the other margin
+    - specificity - 
+    - selector:
         - element selector
             ```
             p {
@@ -137,6 +153,7 @@
                 }
             ```
         - combining selectors
+            - not limited to element selector. we can use id, class, element
             - element with class selector
                 ```
                 p.big {
@@ -145,7 +162,7 @@
                 ```
             - child selector
                 - every p element which is direct child of an article element will apply the following style
-                - not limited to element selector. we can use id, class, element
+                (read from right to left)
                 ```
                 article > p {
                     color: blue;
@@ -153,19 +170,109 @@
                 ```
             - descendent selector
                 - every p element which are child of an article element will apply the following style
-                - not limited to element selector. we can use id, class, element
                 ``` 
                 article p {
                     color: blue;
                 }
                 ```
             - adjuscent sibling selector
+                - first p element after and adjecent to div element will apply the following style 
+                ```
+                div + p {
+                    background-color: yellow;
+                }
+                ```
             - general sibling selector
-        - pseudo selector
-            - anyselector followed by : and then below pseudo selector
-            - :link
-            - :visited
-            - :hover
-            - :active
+                - all p element after and adjecent to div element will apply the following style
+                ```
+                div ~ p{
+                    background-color: yellow;
+                }
+                ```
+        - pseudo class selector
+            - able to style on user interaction with page
+            - anyselector followed by : and then pseudo-class name
+            - :hover must come after link and visited, :active must come after hover
+            - pseudo class name is not case sensative
+            - :link - unvisited link
+            - :visited - visited link
+            - :hover - after cursor moved on the link
+            - :active - after clicked on the link
             - :nth_child(...)
-                - value - number like 4 5, all odd level,all even level
+                - value - numbers, odd, even
+                ```
+                header li:nth-child(3){
+                    text-align: center;
+                }
+                ```
+            - pseudo selector can be combine as well
+                ```
+                header li:nth-child(3):hover{
+                    text-align: center;
+                }
+                ``` 
+    - property: list-size
+        - value None: will remove bullet points of the list
+    - property: text-decoration
+        - value None: will remove default styling provided by browser for text
+    - property: display
+        - value block: will make any inline element to block level element
+    - property: cursor
+        - value pointer: will change cursor to arm pointer
+    - property: font-size
+        - relative sizing - font-size dont have overriding effect(if style is defined again) instead cummulative effect
+    - property: font-family
+        - there is chance font family doesnt present in user machine, so we can define multiple font
+        ```
+        style {
+            font-family: Arial, Helvetica;
+        }
+        ```
+    - property: font-style
+    - property: font-weight
+    - property: text-transform
+    - property: text-align
+    - property: box_sizing
+        - cannot be inherited by child element
+        - value: border-box - will limit the box size to width property
+        - value: content-box - will limit the width property only till content-box
+
+    - property: overflow
+        - needed to control the content of the body from getting out of its own box size
+        - value: visible(default) - will let overflow the content from the box
+        - value: hidden - will show the content whichever is inside the box size
+        - value: auto - will give the scroll bar whichever side is needed
+        - value: scroll - scroll bar on both side
+    - selector *:
+        - will apply every property to all element in the file
+
+    - property: background-color
+    - property: background-image
+        - {background-image: url();}
+    - property: background-repeat
+    - property: background-position
+    - property: background - we can define all background property value in this one by spacing in it
+
+    element positioning:
+        - static positioning
+        - floating positioning:
+            - it take out the box from regular document flow
+            - vertical margin will not collapse
+            - to resume normal doc flow use clear property
+        absolute positioning
+        relative positioning
+    - Media Queries: `@media`
+        - can be combine using logical operator
+    - responsive design
+        - sites of layout adapts to the size of the device
+        - 12 column grid responsive layout
+        - viewport meta tag to turn off default mobile zooming
+
+- Twitter Bootstrap(CSS Framework)
+    - [bootstrap](https://getbootstrap.com/)
+    - [jquery](https://jquery.com/)
+    - bootstrap depend on jquery
+    - bootstrap grid system
+        - col-size-span
+            - size - width range identifier
+            - span - 12 columns

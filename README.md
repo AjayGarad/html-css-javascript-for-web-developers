@@ -17,6 +17,8 @@ browser-sync start --server --directory --files "*"
 - https://browsersync.io/
 - https://jsfiddle.net/
 - https://codepen.io/
+- https://getbootstrap.com/
+- https://jquery.com/
 - **feature investigation**
     - https://css-tricks.com/
     - https://caniuse.com/

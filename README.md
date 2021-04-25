@@ -19,6 +19,7 @@ browser-sync start --server --directory --files "*"
 - https://codepen.io/
 - https://getbootstrap.com/
 - https://jquery.com/
+- https://fonts.google.com/
 - **feature investigation**
     - https://css-tricks.com/
     - https://caniuse.com/

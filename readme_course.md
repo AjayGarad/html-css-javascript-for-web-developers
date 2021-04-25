@@ -1,4 +1,4 @@
-- HTML
+## HTML
     - Annotates content
     - Define document structure(structure of the content)
     - browser will interpret the html page sequentially from top to bottom
@@ -102,30 +102,29 @@
 
     - comment tag - <!-- code -->
 
-- CSS - cascading styles sheet
-    - padding margin border
+## CSS - cascading styles sheet
+    - content padding border margin
     - css rule consist of selector(p) followed by open and close curly braces - inside it contain declartion - which contain property(color) and value(blue)
     - ex:
         p {color: blue;}
     - collection of css rules is call style sheet
     - cascading algorithm is used to combine property and value from different sources
-    - conflict resolution in cascading algo 
+    - conflict resolution in cascading algo (lec 17-1)
         - origin 
             - two declaration are specified for same property and same target, then last declaration wins
         - merge
             - when different declaration do not conflict but target same element, then declartion merge
         - inheritance
             - every child element inherit property parent element till no conflict
-        - specificity
+        - specificity (lec 17-2)
             - most specific selector combination wins
             - order of score ranking
                 1. style=".." 
                 2. ID
                 3. (class, psudo-class, attribute)
                 4. element
-    - vertical margin collapse with other vertical margin whereas horizontal margin cumulative the other margin
-    - specificity - 
-    - selector:
+
+    - selector:(lec 13)
         - element selector
             ```
             p {
@@ -152,7 +151,7 @@
                 color: blue;
                 }
             ```
-        - combining selectors
+        - combining selectors (lec 14)
             - not limited to element selector. we can use id, class, element
             - element with class selector
                 ```
@@ -189,7 +188,7 @@
                     background-color: yellow;
                 }
                 ```
-        - pseudo class selector
+        - pseudo class selector (lec 15)
             - able to style on user interaction with page
             - anyselector followed by : and then pseudo-class name
             - :hover must come after link and visited, :active must come after hover
@@ -219,7 +218,7 @@
         - value block: will make any inline element to block level element
     - property: cursor
         - value pointer: will change cursor to arm pointer
-    - property: font-size
+    - property: font-size(lec-18)
         - relative sizing - font-size dont have overriding effect(if style is defined again) instead cummulative effect
     - property: font-family
         - there is chance font family doesnt present in user machine, so we can define multiple font
@@ -232,27 +231,29 @@
     - property: font-weight
     - property: text-transform
     - property: text-align
-    - property: box_sizing
+
+    - property: box_sizing(lec 19)
         - cannot be inherited by child element
+        - vertical margin collapse with other vertical margin whereas horizontal margin cumulative the other margin
         - value: border-box - will limit the box size to width property
         - value: content-box - will limit the width property only till content-box
 
-    - property: overflow
+    - property: overflow(lec 19-3)
         - needed to control the content of the body from getting out of its own box size
         - value: visible(default) - will let overflow the content from the box
         - value: hidden - will show the content whichever is inside the box size
         - value: auto - will give the scroll bar whichever side is needed
         - value: scroll - scroll bar on both side
-    - selector *:
+    - selector *:(lec 19-1)
         - will apply every property to all element in the file
 
-    - property: background-color
-    - property: background-image
-        - {background-image: url();}
-    - property: background-repeat
-    - property: background-position
     - property: background - we can define all background property value in this one by spacing in it
-
+        - property: background-color
+        - property: background-image
+            - {background-image: url();}
+        - property: background-repeat
+        - property: background-position
+    
     element positioning:
         - static positioning
         - floating positioning:
